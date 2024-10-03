@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --blue: hsl(248, 32%, 49%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --greyish-blue: hsl(246, 25%, 77%);
+  --white: #fff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  height: 100dvh;
+  background: url(images/bg-intro-desktop.png) var(--red);
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4em;
+  padding: 80px;
+}
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  padding-right: 50px;
+  padding-left: 50px;
+}
+.description h1 {
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+p {
+  font-size: 16px;
+}
+.trial-message {
+  background-color: var(--blue);
+  padding: 20px;
+  color: var(--white);
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 8px 0px rgba(0, 0, 0, 0.15);
+  margin-bottom: 30px;
+}
+.trial-message p span {
+  font-weight: bold;
+}
+#trialForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--white);
+}
