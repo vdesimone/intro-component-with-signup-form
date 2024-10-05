@@ -18,12 +18,14 @@ body {
   align-items: center;
   height: 100dvh;
   background: url(images/bg-intro-desktop.png) var(--red);
+  overflow-y: scroll;
 }
 .container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 4em;
   padding: 80px;
+  max-height: 100dvh;
 }
 .description {
   display: flex;
@@ -43,7 +45,7 @@ p {
 }
 .trial-message {
   background-color: var(--blue);
-  padding: 20px;
+  padding: 20px 40px;
   color: var(--white);
   text-align: center;
   border-radius: 10px;
@@ -51,11 +53,129 @@ p {
   margin-bottom: 30px;
 }
 .trial-message p span {
-  font-weight: bold;
+  font-weight: 600;
 }
 #trialForm {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: var(--white);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 0px rgba(0, 0, 0, 0.15);
+}
+#trialForm div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+#trialForm div input {
+  flex-grow: 1;
+  padding: 20px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+#trialForm div input[type="submit"] {
+  margin-bottom: 15px;
+}
+.input-container {
+  position: relative;
+  margin-bottom: 25px;
+}
+.input-container input {
+  border: 2px solid rgb(228, 228, 228);
+}
+.input-container input:focus-visible {
+  border: 2px solid var(--dark-blue);
+  outline: none;
+  caret-color: var(--dark-blue);
+}
+.error-icon {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+}
+.error-message {
+  display: none;
+  position: absolute;
+  right: 10px;
+  bottom: -22px;
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--red);
+  text-align: end;
+}
+.submit-container input {
+  background-color: var(--green);
+  color: var(--white);
+  text-transform: uppercase;
+  border: 2px solid hsl(153, 49%, 47%);
+  box-shadow: 0 5px 0px hsl(153, 49%, 47%);
+  font-size: 18px;
+  transition: background-color 0.08s;
+}
+.submit-container input:hover {
+  background-color: hsl(154, 65%, 68%);
+  border: 2px solid hsl(153, 49%, 61%);
+  box-shadow: 0 5px 0px hsl(153, 49%, 61%);
+  cursor: pointer;
+}
+#trialForm p {
+  font-size: 13px;
+  color: var(--greyish-blue);
+}
+#trialForm p a {
+  color: var(--red);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.error {
+  margin-bottom: 40px;
+}
+.error input {
+  border: 2px solid var(--red);
+  color: var(--red);
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+    padding: 80px 20px;
+    height: 100dvh;
+    gap: 3em;
+    overflow-y: scroll;
+  }
+  .description {
+    text-align: center;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .description h1 {
+    font-size: 34px;
+  }
+  #trialForm {
+    padding: 30px;
+  }
+  #trialForm p {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 400px) {
+  .container {
+    padding: 80px 10px;
+  }
+  #trialForm {
+    padding: 15px;
+  }
+  .input-container input {
+    font-size: 16px;
+  }
+  .submit-container input {
+    font-size: 16px;
+  }
 }
