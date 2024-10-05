@@ -17,28 +17,28 @@
           <p><span>Try it free for 7 days</span> then $20/mo. thereafter</p>
         </div>
         <form id="trialForm" method="POST">
-          <div>
+          <div class="input-container">
             <input type="text" id="fname" name="fname" placeholder="First Name" required>
-            <img src="images/icon-error.svg" alt="Error Icon">
-            <span class="error-message" id="fnameError"></span>
+            <img class="error-icon" src="images/icon-error.svg" alt="Error Icon">
+            <span class="error-message" id="fnameError">First name cannot be empty</span>
           </div>
-          <div>
+          <div class="input-container">
             <input type="text" id="lname" name="lname" placeholder="Last Name" required>
-            <img src="images/icon-error.svg" alt="Error Icon">
-            <span class="error-message" id="lnameError"></span>
+            <img class="error-icon" src="images/icon-error.svg" alt="Error Icon">
+            <span class="error-message" id="lnameError">Last Name cannot be empty</span>
           </div>
-          <div>
+          <div class="input-container">
             <input type="email" id="email" name="email" placeholder="Email Address" required>
-            <img src="images/icon-error.svg" alt="Error Icon">
-            <span class="error-message" id="emailError"></span>
+            <img class="error-icon" src="images/icon-error.svg" alt="Error Icon">
+            <span class="error-message" id="emailError">Looks like this is not an email</span>
           </div>
-          <div>
+          <div class="input-container">
             <input type="password" id="pass" name="pass" placeholder="Password" required>
-            <img src="images/icon-error.svg" alt="Error Icon">
-            <span class="error-message" id="passError"></span>
+            <img class="error-icon" src="images/icon-error.svg" alt="Error Icon">
+            <span class="error-message" id="passError">Password cannot be empty</span>
           </div>
-          <div>
-            <input type="submit" value="Claim Your Free Trial">
+          <div class="submit-container">
+            <input type="submit" id="submit" value="Claim Your Free Trial">
           </div>
           <p>By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></p>
         </form>
